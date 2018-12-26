@@ -1,0 +1,34 @@
+.progress-title{
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 10px 0;
+}
+.progress{
+    height: 10px !important;
+    line-height: 15px;
+    border-radius: 20px;
+    background: $gray-400 !important ;
+    margin-bottom: 50px;
+    box-shadow: none;
+    overflow: visible;
+}
+.progress .progress-bar{
+    position: relative;
+    border-radius: 20px 0 0 20px;
+    animation: animate-positive 2s;
+}
+.progress .progress-value{
+    display: block;
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 8px;
+}
+@-webkit-keyframes animate-positive{
+    0% { width: 0%; }
+}
+@keyframes animate-positive{
+    0% { width: 0%; }
+}

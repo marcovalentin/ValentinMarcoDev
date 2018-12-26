@@ -1,0 +1,30 @@
+<div class="row" (click)="showDescription(this.projects[2*(this.page-1)])">
+  <div class="col-10 mx-auto pb-5">
+      <div class="card-banner overlay-grad" 
+      [ngStyle]="{'backgroundImage': 'url(' + this.projects[2*(this.page-1)]?.principalPhoto + ')'}">
+      <div class="card-body">
+        <h5 class="card-title">{{this.projects[2*(this.page-1)]?.title}}</h5>
+        <p class="card-text">{{this.projects[2*(this.page-1)]?.description}}</p>
+        <p class="card-subtext">{{this.projects[2*(this.page-1)]?.technologies}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row" *ngIf="this.projects.length > 2*(this.page-1)+1" (click)="showDescription(this.projects[2*(this.page-1)+1])">
+  <div class="col-10 mx-auto pb-3">
+    <div class="card-banner overlay-grad" 
+    [ngStyle]="{'backgroundImage': 'url(' + this.projects[2*(this.page-1)+1]?.principalPhoto + ')'}">
+      <div class="card-body">
+        <h5 class="card-title">{{this.projects[2*(this.page-1)+1]?.title}}</h5>
+        <p class="card-text">{{this.projects[2*(this.page-1)+1]?.description}}</p>
+        <p class="card-subtext">{{this.projects[2*(this.page-1)+1]?.technologies}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+      <ngb-pagination class="d-flex justify-content-center" [collectionSize]="10*(this.projects.length/2)" [(page)]="page"></ngb-pagination>
+  </div>
+</div>

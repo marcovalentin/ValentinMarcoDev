@@ -1,0 +1,14 @@
+.home-left {
+    min-height: 100vh;
+    background-color: $primary;
+}
+
+.avatar {
+    border: 3px solid $info;
+}
+ 
+.img-principal {
+    background-image: url(../assets/val.jpeg);
+    background-position: center center;
+    background-size: cover;
+}

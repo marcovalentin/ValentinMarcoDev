@@ -1,0 +1,29 @@
+// Variables
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$green: #8D8741;
+$blue: #4056A1;
+$orange: #D79922;
+$yellow: #EFE2BA;
+$red: #F13C20;
+
+
+$primary:       $yellow !default;
+$secondary:     $orange !default;
+$success:       $green !default;
+$info:          $blue !default;
+$warning:       $orange !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;

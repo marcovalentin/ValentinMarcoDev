@@ -1,0 +1,29 @@
+<div class="modal-header bg-secondary">
+    <h4 class="modal-title">{{project?.title}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body bg-primary">
+    <ngb-carousel class="text-center" *ngIf="project.photos">
+        <ng-template ngbSlide *ngFor="let photo of project.photos; let i=index;">
+            <img class="img-fluid" style="height: 70vh;" [src]="photo" [alt]="'photo' + i">
+        </ng-template>
+    </ngb-carousel>
+    <div *ngIf="!project.photos">
+        <p class="text-secondary">{{project?.description}}</p>
+        <p class="text-info">Technologies utilisées : {{project?.technologies}}</p>
+        <p class="text-danger">Durée : {{project?.duration}}</p>
+    </div>
+</div>
+<div class="modal-footer bg-primary">
+    <a class="btn btn-outline-secondary pr-3" role="button" *ngIf="project.links.web" [href]="project.links.web" target="blank">
+        <i class="fas fa-spider fa-2x"></i> Site Web
+    </a>
+    <a class="btn btn-outline-danger pr-3" role="button" *ngIf="project.links.android" [href]="project.links.android" target="blank">
+        <i class="fab fa-google-play fa-2x"></i> Google Play
+    </a>
+    <a class="btn btn-outline-info pr-3" role="button" *ngIf="project.links.ios" [href]="project.links.ios" target="blank">
+        <i class="fab fa-app-store fa-2x"></i> App Store
+    </a>
+</div>

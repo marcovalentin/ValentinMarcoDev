@@ -1,0 +1,18 @@
+<mdb-navbar #navbar SideClass="navbar navbar-expand-lg navbar-light ml-auto" class="bg-primary pt-3 pb-3" [containerInside]="true">
+    <links>
+      <ul class="navbar-nav">
+        <li class="nav-item" [ngClass]="{'active': currentPage === 'about'}">
+          <a class="nav-link waves-dark" (click)="onChangePage('about')">A propos</a>
+        </li>
+        <li class="nav-item" [ngClass]="{'active': currentPage === 'skills'}">
+          <a class="nav-link waves-dark" (click)="onChangePage('skills')">Competences</a>
+        </li>
+        <li class="nav-item" [ngClass]="{'active': currentPage === 'projects'}">
+          <a class="nav-link waves-dark" (click)="onChangePage('projects')">Projets et expérience</a>
+        </li>
+        <li class="nav-item" [ngClass]="{'active': currentPage === 'studies'}">
+          <a class="nav-link waves-dark" (click)="onChangePage('studies')">Etudes</a>
+        </li>
+      </ul>  
+    </links>
+</mdb-navbar>
