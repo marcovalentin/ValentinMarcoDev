@@ -18,9 +18,9 @@ export class NavComponent implements OnInit {
     this.navbar.show();
   }
 
-  onChangePage(page: Pages) {
-    this.currentPage = page;
-    this.changePage.emit(page);
+  onChangePage(page: string) {
+    this.currentPage = Pages[page];
+    this.changePage.emit(this.currentPage);
   }
 
 }

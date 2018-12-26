@@ -11,9 +11,10 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class HomeComponent implements OnInit {
 
-  page: Pages = Pages.ABOUT;
+  page: Pages;
 
   constructor(private modalService: NgbModal) {
+    this.page = Pages.ABOUT;
   }
 
   ngOnInit() {
@@ -26,6 +27,7 @@ export class HomeComponent implements OnInit {
 
   onChangePage(page: Pages) {
     this.page = page;
+    console.log(this.page);
   }
 
 }
